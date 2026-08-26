@@ -5,7 +5,7 @@ import { renderGenericProjectDetail } from './components/project-detail.js';
 import { renderProjectGalleries, renderProjectTracks } from './components/projects.js';
 import { initNavigation, initRevealAnimations, restoreHashTarget, updateCopyrightYear } from './components/site.js';
 import { initSkillProjectChooser, renderSkillGroups } from './components/skills.js';
-import { renderProjectVideos } from './components/videos.js';
+import { renderProjectVideos, renderVideoEmbeds } from './components/videos.js';
 
 const pathPrefix = document.body.classList.contains('project-page') ? '../' : '';
 
@@ -13,6 +13,7 @@ renderProjectTracks(projectTracks, { pathPrefix });
 renderGenericProjectDetail(projectLookup);
 renderProjectGalleries(projectLookup, { pathPrefix });
 renderProjectVideos(projectLookup);
+renderVideoEmbeds();
 renderSkillGroups(skillGroups);
 initSkillProjectChooser(projectLookup);
 initNavigation();

@@ -1,4 +1,4 @@
-function videoMarkup(video) {
+export function videoMarkup(video) {
   return `
     <article class="video-card">
       <div class="video-embed">
@@ -13,6 +13,16 @@ function videoMarkup(video) {
       </div>
       <h3>${video.title}</h3>
     </article>`;
+}
+
+export function renderVideoEmbeds(root = document) {
+  root.querySelectorAll('[data-video-embed]').forEach(container => {
+    const youtubeId = container.dataset.youtubeId;
+    if (!youtubeId) return;
+
+    const title = container.dataset.videoTitle || 'Project video';
+    container.innerHTML = videoMarkup({ youtubeId, title });
+  });
 }
 
 export function renderProjectVideos(projects, root = document) {

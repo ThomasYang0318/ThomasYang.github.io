@@ -3,37 +3,123 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="OpenGL 3D Rendering System — Yang Chi Hung portfolio project." />
+  <meta name="description" content="OpenGL 3D Rendering System — a four-stage visual computing project by Yang Chi Hung." />
   <title>OpenGL 3D Rendering System — Yang Chi Hung</title>
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="../styles.css" />
 </head>
 <body class="project-page">
-  <header class="site-header"><div class="wrap nav-wrap"><a class="brand" href="../index.html">Yang Chi Hung</a><nav class="nav"><a href="../index.html#expertise">Expertise</a><a href="../index.html#projects">Projects</a><a href="../index.html#experience">Experience</a><a href="../index.html#about">Profile</a><a href="https://canva.link/bxi6xtonc9trjl6" target="_blank" rel="noreferrer">Resume ↗</a></nav><button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button></div></header>
+  <header class="site-header">
+    <div class="wrap nav-wrap">
+      <a class="brand" href="../index.html">Yang Chi Hung</a>
+      <nav class="nav">
+        <a href="../index.html#expertise">Expertise</a>
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#experience">Experience</a>
+        <a href="../index.html#about">Profile</a>
+        <a href="https://canva.link/bxi6xtonc9trjl6" target="_blank" rel="noreferrer">Resume &nearr;</a>
+      </nav>
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </header>
+
   <main>
     <section class="project-hero wrap reveal">
-      <a class="back-link" href="../index.html#projects">← Back to projects</a>
-      <p class="eyebrow">Visual Computing · C++</p>
+      <a class="back-link" href="../index.html#projects">&larr; Back to projects</a>
+      <p class="eyebrow">Visual Computing &middot; C++</p>
       <h1>OpenGL 3D Rendering System</h1>
-      <div class="project-summary"><div class="tags"><span>C++</span><span>OpenGL</span><span>OBJ</span><span>Shader</span><span>Lighting</span></div><p>A custom 3D rendering system implemented in C++ to understand the full pipeline behind common 3D software — from model parsing and mesh construction to shaders, materials, textures, and lighting.</p></div>
-      <div class="project-hero-image project-carousel project-detail-carousel" data-project-gallery="opengl" data-carousel aria-label="OpenGL project gallery">
-        <div class="carousel-track">
-          <div class="carousel-slide is-active"><img src="../assets/images/projects/visual/opengl-rendering.jpg" alt="OpenGL rendering competition scenes with lighting and texturing" /></div>
-          <div class="carousel-slide"><img src="../assets/images/projects/visual/opengl-system-overview.jpg" alt="OpenGL OBJ loader, shader and material system, and lighting comparison" /></div>
+      <div class="project-summary">
+        <div class="tags"><span>C++</span><span>OpenGL</span><span>OBJ</span><span>GLSL</span><span>Lighting</span></div>
+        <p>A graphics system built progressively across four stages: loading geometry, organizing materials, implementing real-time lighting and textures, and composing complete rendered scenes.</p>
+      </div>
+      <div class="project-hero-image project-carousel project-detail-carousel" data-project-gallery="opengl" data-carousel aria-label="OpenGL project gallery"></div>
+    </section>
+
+    <section class="case-section wrap reveal" aria-labelledby="project-progression">
+      <div class="case-grid">
+        <h2 id="project-progression">Project progression</h2>
+        <div class="case-content">
+          <p>Each stage extends the same renderer. The project moves from raw OBJ data to GPU-ready meshes, then adds material-aware shaders, physically motivated light behavior, textures, and final scene composition.</p>
+          <ol class="stage-roadmap">
+            <li><a href="#stage-1"><span>01</span><strong>OBJ Loader</strong><small>Geometry &amp; buffers</small></a></li>
+            <li><a href="#stage-2"><span>02</span><strong>Materials</strong><small>SubMeshes &amp; shaders</small></a></li>
+            <li><a href="#stage-3"><span>03</span><strong>Lighting</strong><small>Lights &amp; textures</small></a></li>
+            <li><a href="#stage-4"><span>04</span><strong>Final Scene</strong><small>Full-pipeline rendering</small></a></li>
+          </ol>
         </div>
-        <button class="carousel-button carousel-prev" type="button" aria-label="Previous image">‹</button>
-        <button class="carousel-button carousel-next" type="button" aria-label="Next image">›</button>
-        <div class="carousel-status" aria-live="polite"><span data-carousel-current>1</span> / <span data-carousel-total>2</span></div>
       </div>
     </section>
 
-    <section class="case-section wrap reveal"><div class="case-grid"><h2>Rendering pipeline</h2><div class="case-content"><p>The project begins by reading OBJ files and parsing vertices, faces, and material information. The renderer then builds meshes and uses shaders to calculate lighting and material effects before drawing the 3D model to the screen.</p><div class="link-row"><a class="button button-dark" href="https://youtu.be/56LOqgYDw74?si=bR4c4CGmDP8n8YdF" target="_blank" rel="noreferrer">Lighting demo ↗</a><a class="button button-light" href="https://youtu.be/pkUp02u5Pzg?si=0LxkyKDCgAUjesT6" target="_blank" rel="noreferrer">OBJ loader ↗</a></div></div></div></section>
+    <section id="stage-1" class="case-section wrap reveal">
+      <div class="case-grid">
+        <div class="stage-heading"><span>Stage 01</span><h2>OBJ Loader &amp; Mesh Construction</h2></div>
+        <div class="case-content">
+          <p>The first stage establishes the geometry pipeline. The loader parses OBJ positions, texture coordinates, normals, and polygon faces, then converts them into indexed triangle meshes that can be uploaded to the GPU.</p>
+          <div class="stage-feature-grid">
+            <article><h3>OBJ parsing</h3><p>Reads <code>v</code>, <code>vt</code>, and <code>vn</code> records and triangulates polygon faces using a triangle fan.</p></article>
+            <article><h3>Vertex remapping</h3><p>Deduplicates repeated position, UV, and normal tuples to build compact vertex and index arrays.</p></article>
+            <article><h3>GPU buffers</h3><p>Creates a vertex buffer and index buffer, defines the vertex layout, and renders meshes with indexed drawing.</p></article>
+            <article><h3>Runtime controls</h3><p>Supports dynamic model loading and deletion, normalization, and point, wireframe, or solid display modes.</p></article>
+          </div>
+          <div class="stage-video" data-video-embed data-youtube-id="ttChRcuhHQU" data-video-title="Stage 1 — OBJ loader and mesh construction"></div>
+        </div>
+      </div>
+    </section>
 
-    <section class="case-section wrap reveal"><div class="case-grid"><h2>Lighting & texturing</h2><div class="case-content"><p>The renderer supports material processing, texturing, and multiple light types, making the differences between directional, spot, point, and combined lighting visible in the final output.</p><div class="case-image case-image-dark"><img src="../assets/images/projects/visual/opengl-system-overview.jpg" alt="OpenGL OBJ loader, shader and material system, and lighting comparison" /></div></div></div></section>
+    <section id="stage-2" class="case-section wrap reveal">
+      <div class="case-grid">
+        <div class="stage-heading"><span>Stage 02</span><h2>Shaders &amp; Materials</h2></div>
+        <div class="case-content">
+          <p>The second stage extends the loader for multi-material models. OBJ material assignments become separate SubMeshes, allowing the renderer to draw different parts of one model with their own material parameters.</p>
+          <div class="stage-feature-grid">
+            <article><h3>Material parsing</h3><p>Reads <code>usemtl</code> assignments and MTL properties including <code>Ka</code>, <code>Kd</code>, <code>Ks</code>, and <code>Ns</code>.</p></article>
+            <article><h3>SubMesh structure</h3><p>Uses one shared vertex buffer for the model and a separate index buffer for each material-based SubMesh.</p></article>
+            <article><h3>GLSL pipeline</h3><p>The vertex shader applies the model-view-projection transform while the fragment shader displays each material's diffuse color.</p></article>
+            <article><h3>Visual inspection</h3><p>Model rotation and model switching make material boundaries and multi-part mesh construction easy to verify.</p></article>
+          </div>
+          <div class="stage-video" data-video-embed data-youtube-id="pkUp02u5Pzg" data-video-title="Stage 2 — Shaders and materials"></div>
+        </div>
+      </div>
+    </section>
 
-    <section class="case-section wrap reveal"><div class="case-grid"><h2>Project videos</h2><div class="case-content" data-project-videos="opengl"><p>Video demos are available through the links above.</p></div></div></section>
+    <section id="stage-3" class="case-section wrap reveal">
+      <div class="case-grid">
+        <div class="stage-heading"><span>Stage 03</span><h2>Lighting &amp; Texturing</h2></div>
+        <div class="case-content">
+          <p>The third stage moves material and lighting calculations into the fragment shader. It combines Blinn-Phong shading, multiple light models, texture sampling, and an interactive skybox to evaluate the renderer under changing conditions.</p>
+          <div class="stage-feature-grid">
+            <article><h3>Blinn-Phong shading</h3><p>Calculates diffuse and specular contributions per fragment for smoother, more responsive surface lighting.</p></article>
+            <article><h3>Three light types</h3><p>Implements directional, point, and spot lights, with inverse-square attenuation for local lights.</p></article>
+            <article><h3>Spotlight falloff</h3><p>Interpolates intensity between inner and outer cone angles for a controlled, soft spotlight edge.</p></article>
+            <article><h3>Textures &amp; environment</h3><p>Uses <code>map_Kd</code> textures when available, falls back to material diffuse color, and supports switchable skyboxes.</p></article>
+          </div>
+          <div class="case-image case-image-dark"><img src="../assets/images/projects/visual/opengl-system-overview.jpg" alt="OpenGL development stages showing mesh loading, materials, and lighting" /></div>
+          <div class="stage-video" data-video-embed data-youtube-id="56LOqgYDw74" data-video-title="Stage 3 — Lighting and texturing"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="stage-4" class="case-section wrap reveal">
+      <div class="case-grid">
+        <div class="stage-heading"><span>Stage 04</span><h2>Final Scene / Rendering Competition</h2></div>
+        <div class="case-content">
+          <p>The final stage applies the complete pipeline to composed scenes. Geometry, material separation, textures, local lights, and environmental presentation work together to establish a distinct mood in each final render.</p>
+          <div class="stage-result-grid">
+            <figure class="stage-result-card">
+              <img src="../assets/images/projects/visual/opengl-final-love-you-partner.png" alt="Love You Partner final scene with two characters in front of a fireplace" />
+              <figcaption><strong>Love You Partner</strong><span>A warm fireplace composition using contrasting amber and red illumination.</span></figcaption>
+            </figure>
+            <figure class="stage-result-card">
+              <img src="../assets/images/projects/visual/opengl-final-weeping-angel.png" alt="Weeping Angel final scene with statues and candles in a dark stone interior" />
+              <figcaption><strong>Weeping Angel</strong><span>A darker stone interior shaped by candlelight and concentrated red accents.</span></figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
-  <footer class="footer wrap"><span>© <span id="year"></span> Yang Chi Hung</span><a href="../index.html">Home ↑</a></footer>
+
+  <footer class="footer wrap"><span>&copy; <span id="year"></span> Yang Chi Hung</span><a href="../index.html">Home &nearr;</a></footer>
   <script type="module" src="../script.js"></script>
 </body>
 </html>

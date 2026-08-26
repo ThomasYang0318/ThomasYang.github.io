@@ -155,8 +155,9 @@ export const projectTracks = [
       tags: ['C++', 'OpenGL', 'Shader', '3D Rendering'],
       linkLabel: 'Read project',
       videos: [
-        { title: 'OpenGL lighting demo', youtubeId: '56LOqgYDw74' },
-        { title: 'OpenGL OBJ loader demo', youtubeId: 'pkUp02u5Pzg' }
+        { title: 'Stage 1 — OBJ loader and mesh construction', youtubeId: 'ttChRcuhHQU' },
+        { title: 'Stage 2 — Shaders and materials', youtubeId: 'pkUp02u5Pzg' },
+        { title: 'Stage 3 — Lighting and texturing', youtubeId: '56LOqgYDw74' }
       ],
       images: [
         {
@@ -166,6 +167,14 @@ export const projectTracks = [
         {
           src: 'assets/images/projects/visual/opengl-system-overview.jpg',
           alt: 'OpenGL OBJ loader, shader and material system, and lighting comparison'
+        },
+        {
+          src: 'assets/images/projects/visual/opengl-final-love-you-partner.png',
+          alt: 'Love You Partner final OpenGL scene with warm fireplace lighting'
+        },
+        {
+          src: 'assets/images/projects/visual/opengl-final-weeping-angel.png',
+          alt: 'Weeping Angel final OpenGL scene in a dark stone interior'
         }
       ]
     },
