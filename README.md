@@ -1,4 +1,4 @@
-# Thomas Yang — Personal Portfolio
+# Yang Chi Hung — Personal Portfolio
 
 A lightweight, modular static portfolio that deploys directly to GitHub Pages.
 

@@ -17,7 +17,7 @@ export function renderGenericProjectDetail(projects, { root = document } = {}) {
   const project = projects[projectId];
 
   if (!project) {
-    root.title = 'Project not found — Thomas Yang';
+    root.title = 'Project not found — Yang Chi Hung';
     container.innerHTML = `
       <section class="project-hero wrap">
         <a class="back-link" href="../index.html#projects">← Back to projects</a>
@@ -28,7 +28,7 @@ export function renderGenericProjectDetail(projects, { root = document } = {}) {
     return;
   }
 
-  root.title = `${project.title} — Thomas Yang`;
+  root.title = `${project.title} — Yang Chi Hung`;
   const description = root.querySelector('meta[name="description"]');
   description?.setAttribute('content', `${project.title} — ${project.description}`);
 

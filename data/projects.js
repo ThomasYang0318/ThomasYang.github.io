@@ -9,44 +9,44 @@ export const projectTracks = [
     name: 'Software Engineering',
     description: 'Product-focused applications, connected services, and software systems built around real user flows.',
     featured: {
-      id: 'nebula',
-      title: 'Nebula Market',
-      href: 'projects/nebula.html',
-      meta: 'Flutter · Blockchain · Product',
-      description: 'A blockchain-based marketplace for issuing, verifying, tracking, and transferring NFT-backed software licenses.',
-      tags: ['Flutter', 'Web3', 'Smart Contract', 'NFT'],
+      id: 'mijing',
+      title: 'Mijing — Deep Travel Discovery',
+      href: 'projects/project.html?id=mijing',
+      meta: 'Flutter · Mobile UX · Travel Discovery',
+      description: 'A map-based mobile experience that helps travelers discover destinations through visual exploration and swipeable recommendations.',
+      tags: ['Flutter', 'Maps', 'Travel Discovery', 'Product Design'],
       linkLabel: 'Read project',
       placeholder: true,
-      videos: [
-        { title: 'Nebula Market demo', youtubeId: 'H5aj_MFhBm4' }
+      details: [
+        'Mijing explores a mobile travel-discovery flow that helps users move from broad map exploration to specific destination ideas.',
+        'The experience combines location-based browsing with swipeable recommendation cards to keep discovery visual, lightweight, and easy to continue.'
+      ],
+      links: [
+        { label: 'View presentation ↗', url: 'https://canva.link/z82jjk7alag1ze0' }
       ],
       images: [
         {
           src: 'assets/images/project-placeholder-dog-en.jpg',
-          alt: 'No image available for the Nebula Market project yet'
+          alt: 'No image available for the Mijing project yet'
         }
       ]
     },
     otherLabel: 'Other software projects',
     otherProjects: [
       {
-        id: 'mijing',
-        title: 'Mijing — Deep Travel Discovery',
-        type: 'Mobile product',
-        description: 'Map-based exploration and swipe-card discovery.',
-        href: 'projects/project.html?id=mijing',
+        id: 'nebula',
+        title: 'Nebula Market',
+        type: 'Blockchain product',
+        description: 'A marketplace for issuing, verifying, tracking, and transferring NFT-backed software licenses.',
+        href: 'projects/nebula.html',
         linkLabel: 'Read project →',
-        tags: ['Mobile UX', 'Maps', 'Travel Discovery'],
-        details: [
-          'Mijing explores a mobile travel-discovery flow that helps users move from broad map exploration to specific destination ideas.',
-          'The experience combines location-based browsing with swipeable recommendation cards to keep discovery visual, lightweight, and easy to continue.'
-        ],
-        links: [
-          { label: 'View presentation ↗', url: 'https://canva.link/z82jjk7alag1ze0' }
+        tags: ['Flutter', 'Web3', 'Smart Contract', 'NFT'],
+        videos: [
+          { title: 'Nebula Market demo', youtubeId: 'H5aj_MFhBm4' }
         ],
         image: {
           src: 'assets/images/project-placeholder-dog-en.jpg',
-          alt: 'No image available for the Mijing project yet'
+          alt: 'No image available for the Nebula Market project yet'
         }
       },
       {
