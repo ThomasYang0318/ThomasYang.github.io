@@ -118,6 +118,34 @@ img { display: block; width: 100%; }
 .flagship-media img { aspect-ratio:16/10; object-fit:contain; padding:clamp(20px,3vw,44px); transition:transform .4s ease; }
 .flagship-media:hover img { transform:scale(1.015); }
 .flagship-media.placeholder-media img { padding:0; object-fit:cover; }
+.project-carousel { position:relative; }
+.carousel-slide { display:none; }
+.carousel-slide.is-active { display:block; }
+.carousel-button {
+  position:absolute;
+  top:50%;
+  z-index:3;
+  width:44px;
+  height:44px;
+  padding:0 0 3px;
+  border:1px solid rgba(255,255,255,.55);
+  border-radius:50%;
+  color:#fff;
+  background:rgba(23,23,23,.72);
+  box-shadow:0 5px 18px rgba(0,0,0,.18);
+  font:400 30px/1 sans-serif;
+  cursor:pointer;
+  transform:translateY(-50%);
+  transition:background .2s ease, transform .2s ease;
+}
+.carousel-button:hover { background:var(--accent); transform:translateY(-50%) scale(1.05); }
+.carousel-button:focus-visible { outline:3px solid rgba(37,99,235,.35); outline-offset:3px; }
+.carousel-prev { left:16px; }
+.carousel-next { right:16px; }
+.carousel-status { position:absolute; right:16px; bottom:14px; z-index:3; padding:7px 10px; border-radius:999px; color:#fff; background:rgba(23,23,23,.72); font-size:11px; font-variant-numeric:tabular-nums; }
+.project-carousel.is-single .carousel-button, .project-carousel.is-single .carousel-status { display:none; }
+.project-carousel:focus-visible { outline:3px solid rgba(37,99,235,.35); outline-offset:4px; }
+.project-detail-carousel .carousel-track { width:100%; }
 .flagship-copy { max-width:530px; }
 .flagship-meta { display:flex; justify-content:space-between; gap:24px; margin-bottom:46px; padding-bottom:14px; border-bottom:1px solid var(--line); color:var(--muted); font-size:11px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; }
 .flagship-copy .project-type { margin-bottom:14px; }
@@ -293,6 +321,10 @@ a.portfolio-card:hover { transform:translateY(-3px); border-color:#bdbdb5; backg
   .portfolio-card { min-height:250px; padding:24px; }
   .flagship-project { padding:48px 0; }
   .flagship-meta { margin-bottom:30px; }
+  .carousel-button { width:38px; height:38px; font-size:26px; }
+  .carousel-prev { left:10px; }
+  .carousel-next { right:10px; }
+  .carousel-status { right:10px; bottom:10px; }
   .other-project-grid { grid-template-columns:1fr; }
   .other-project, .other-project:nth-child(3n+2), .other-project:nth-child(3n+3), .other-project:nth-child(even) { padding:24px 0; border-left:0; }
   .other-project-body { min-height:210px; }
