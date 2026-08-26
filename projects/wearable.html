@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Smart Wearable Resistance Training System — Thomas Yang portfolio project." />
+  <title>Smart Wearable Resistance Training System — Thomas Yang</title>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body class="project-page">
+  <header class="site-header">
+    <div class="wrap nav-wrap">
+      <a class="brand" href="../index.html">Thomas Yang</a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="../index.html#work">Projects</a>
+        <a href="../index.html#experience">Experience</a>
+        <a href="../index.html#about">About</a>
+        <a href="https://canva.link/bxi6xtonc9trjl6" target="_blank" rel="noreferrer">Resume ↗</a>
+      </nav>
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="project-hero wrap reveal">
+      <a class="back-link" href="../index.html#work">← Back to projects</a>
+      <p class="eyebrow">Embedded AI · Wearable System</p>
+      <h1>Smart Wearable Resistance Training System</h1>
+      <div class="project-summary">
+        <div class="tags"><span>IMU</span><span>Optical Sensing</span><span>CNN</span><span>Flutter</span><span>Luckfox Pico Zero</span></div>
+        <p>A wearable system designed to analyze repetition count, movement quality, and fatigue-related physiological changes during resistance training, then present real-time feedback and post-training summaries through a mobile application.</p>
+      </div>
+      <div class="project-hero-image"><img src="../assets/images/wearable-device.svg" alt="Wearable device, enclosure, sensor board, and embedded computer" /></div>
+    </section>
+
+    <section class="case-section wrap reveal">
+      <div class="case-grid">
+        <h2>Overview</h2>
+        <div class="case-content">
+          <p>The project combines motion sensing and optical sensing in a wrist-worn system. IMU data is used for exercise recognition, repetition segmentation, and movement-phase analysis, while optical measurements provide signals for fatigue estimation and physiological-change analysis. The application then presents live training feedback and a training summary.</p>
+          <div class="link-row">
+            <a class="button button-dark" href="https://youtu.be/DJ7WR7n6QPM" target="_blank" rel="noreferrer">Watch demo ↗</a>
+            <a class="button button-light" href="https://canva.link/i5gf08p3kfrgf98" target="_blank" rel="noreferrer">Presentation ↗</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-section wrap reveal">
+      <div class="case-grid">
+        <h2>System architecture</h2>
+        <div class="case-content">
+          <p>The sensing pipeline connects the optical front end and IMU to a Luckfox Pico Zero embedded platform. Processed information is transmitted to a smartphone for training feedback.</p>
+          <div class="case-image"><img src="../assets/images/wearable-system.svg" alt="Wearable resistance training system architecture" /></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-section wrap reveal">
+      <div class="case-grid">
+        <h2>Hardware</h2>
+        <div class="case-content">
+          <p>The prototype includes the wearable enclosure, sensor board, optical sensing circuitry, IMU, and embedded computer. I also participated in sensor-module soldering and hardware testing.</p>
+          <div class="case-image"><img src="../assets/images/wearable-pcb.svg" alt="Wearable sensor PCB and schematic" /></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-section wrap reveal">
+      <div class="case-grid">
+        <h2>AI & application</h2>
+        <div class="case-content">
+          <p>The motion-analysis workflow uses six-axis IMU signals and a CNN-based model to support phase-level movement analysis. The mobile interface is designed to make current training status and session summaries understandable at a glance.</p>
+          <div class="case-image"><img src="../assets/images/wearable-cnn.svg" alt="CNN motion analysis model diagram" /></div>
+          <div class="case-image"><img src="../assets/images/wearable-app.svg" alt="Mobile application screens for the wearable training system" /></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-section wrap reveal">
+      <div class="case-grid">
+        <h2>My contribution</h2>
+        <div class="case-content">
+          <p>My role covered both product thinking and implementation, helping connect the product concept, sensing hardware, AI analysis, and user experience into one system.</p>
+          <div class="role-grid">
+            <div><h3>Product</h3><p>Topic ideation, product concept, and user-requirement analysis.</p></div>
+            <div><h3>UX / App</h3><p>User-flow planning, interface design, and feature interaction planning.</p></div>
+            <div><h3>Hardware</h3><p>Sensor-module soldering and hardware testing.</p></div>
+            <div><h3>AI</h3><p>Programming for motion segmentation and exercise recognition.</p></div>
+            <div><h3>Integration</h3><p>Supported end-to-end integration from sensing to AI analysis.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer wrap"><span>© <span id="year"></span> Thomas Yang</span><a href="../index.html">Home ↑</a></footer>
+  <script src="../script.js"></script>
+</body>
+</html>
