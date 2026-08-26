@@ -329,6 +329,15 @@ a.portfolio-card:hover { transform:translateY(-3px); border-color:#bdbdb5; backg
 .role-grid p { margin:0; color:var(--muted); line-height:1.55; font-size:13px; }
 .link-row { display:flex; flex-wrap:wrap; gap:12px; margin-top:30px; }
 
+@media (min-width: 1200px) {
+  .expertise-card h3, .flagship-copy h3, .other-project h3, .portfolio-card h3 { white-space:nowrap; }
+  .expertise-card h3 { font-size:clamp(21px,1.8vw,27px); }
+  .flagship-copy h3.project-title-medium { font-size:clamp(29px,2.3vw,34px); }
+  .flagship-copy h3.project-title-long { font-size:clamp(21px,1.65vw,24px); letter-spacing:-.035em; }
+  .other-project h3.project-title-medium { font-size:20px; }
+  .other-project h3.project-title-long { font-size:18px; }
+}
+
 @media (max-width: 840px) {
   .wrap { width:min(calc(100% - 32px),var(--max)); }
   .nav { display:none; position:absolute; left:16px; right:16px; top:64px; padding:18px; flex-direction:column; gap:18px; border:1px solid var(--line); background:var(--bg); border-radius:16px; box-shadow:0 16px 40px rgba(0,0,0,.08); }
