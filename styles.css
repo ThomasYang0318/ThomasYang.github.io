@@ -129,6 +129,8 @@ img { display: block; width: 100%; }
 .other-project:nth-child(3n+2), .other-project:nth-child(3n+3) { padding-left:28px; border-left:1px solid var(--line); }
 .other-project-media { overflow:hidden; border-radius:14px; background:var(--surface); }
 .other-project-media img { aspect-ratio:16/10; object-fit:cover; transition:transform .35s ease; }
+.other-project-media img.media-contain { object-fit:contain; padding:14px; }
+.other-project-media img.media-dark { background:#414141; }
 a.other-project:hover .other-project-media img { transform:scale(1.018); }
 .other-project-body { display:flex; min-height:230px; flex-direction:column; padding-top:22px; }
 .other-project span { color:var(--muted); font-size:11px; font-weight:700; letter-spacing:.11em; text-transform:uppercase; }
@@ -221,6 +223,8 @@ a.portfolio-card:hover { transform:translateY(-3px); border-color:#bdbdb5; backg
 .case-content > p { margin-top:0; font-size:18px; line-height:1.75; color:#4e4e4e; }
 .case-image { margin-top:34px; border-radius:20px; overflow:hidden; background:var(--surface); }
 .case-image img { max-height:620px; object-fit:contain; padding:26px; }
+.case-image-dark { background:#414141; }
+.case-image-dark img { padding:0; }
 .visual-placeholder {
   min-height:460px;
   display:flex;
