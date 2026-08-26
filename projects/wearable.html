@@ -13,9 +13,10 @@
     <div class="wrap nav-wrap">
       <a class="brand" href="../index.html">Thomas Yang</a>
       <nav class="nav" aria-label="Primary navigation">
-        <a href="../index.html#work">Projects</a>
+        <a href="../index.html#expertise">Expertise</a>
+        <a href="../index.html#projects">Projects</a>
         <a href="../index.html#experience">Experience</a>
-        <a href="../index.html#about">About</a>
+        <a href="../index.html#about">Profile</a>
         <a href="https://canva.link/bxi6xtonc9trjl6" target="_blank" rel="noreferrer">Resume ↗</a>
       </nav>
       <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
@@ -24,14 +25,16 @@
 
   <main>
     <section class="project-hero wrap reveal">
-      <a class="back-link" href="../index.html#work">← Back to projects</a>
+      <a class="back-link" href="../index.html#projects">← Back to projects</a>
       <p class="eyebrow">Embedded AI · Wearable System</p>
       <h1>Smart Wearable Resistance Training System</h1>
       <div class="project-summary">
         <div class="tags"><span>IMU</span><span>Optical Sensing</span><span>CNN</span><span>Flutter</span><span>Luckfox Pico Zero</span></div>
         <p>A wearable system designed to analyze repetition count, movement quality, and fatigue-related physiological changes during resistance training, then present real-time feedback and post-training summaries through a mobile application.</p>
       </div>
-      <div class="project-hero-image"><img src="../assets/images/wearable-device.svg" alt="Wearable device, enclosure, sensor board, and embedded computer" /></div>
+      <div class="project-hero-image visual-placeholder" role="img" aria-label="Wearable device system overview">
+        <span>System overview</span><strong>Wearable sensing → Edge intelligence → Mobile feedback</strong><small>Device photography / product render</small>
+      </div>
     </section>
 
     <section class="case-section wrap reveal">
@@ -52,7 +55,9 @@
         <h2>System architecture</h2>
         <div class="case-content">
           <p>The sensing pipeline connects the optical front end and IMU to a Luckfox Pico Zero embedded platform. Processed information is transmitted to a smartphone for training feedback.</p>
-          <div class="case-image"><img src="../assets/images/wearable-system.svg" alt="Wearable resistance training system architecture" /></div>
+          <div class="case-image visual-placeholder visual-placeholder-compact" role="img" aria-label="Wearable resistance training system architecture">
+            <span>Architecture</span><strong>Optical sensor + IMU → Luckfox Pico Zero → Smartphone</strong>
+          </div>
         </div>
       </div>
     </section>
@@ -62,7 +67,9 @@
         <h2>Hardware</h2>
         <div class="case-content">
           <p>The prototype includes the wearable enclosure, sensor board, optical sensing circuitry, IMU, and embedded computer. I also participated in sensor-module soldering and hardware testing.</p>
-          <div class="case-image"><img src="../assets/images/wearable-pcb.svg" alt="Wearable sensor PCB and schematic" /></div>
+          <div class="case-image visual-placeholder visual-placeholder-compact" role="img" aria-label="Wearable sensor PCB and schematic">
+            <span>Hardware</span><strong>Sensor board · Optical front end · IMU · Embedded computer</strong>
+          </div>
         </div>
       </div>
     </section>
@@ -72,8 +79,12 @@
         <h2>AI & application</h2>
         <div class="case-content">
           <p>The motion-analysis workflow uses six-axis IMU signals and a CNN-based model to support phase-level movement analysis. The mobile interface is designed to make current training status and session summaries understandable at a glance.</p>
-          <div class="case-image"><img src="../assets/images/wearable-cnn.svg" alt="CNN motion analysis model diagram" /></div>
-          <div class="case-image"><img src="../assets/images/wearable-app.svg" alt="Mobile application screens for the wearable training system" /></div>
+          <div class="case-image visual-placeholder visual-placeholder-compact" role="img" aria-label="CNN motion analysis model diagram">
+            <span>AI pipeline</span><strong>Six-axis IMU → Segmentation → CNN classification → Movement analysis</strong>
+          </div>
+          <div class="case-image visual-placeholder visual-placeholder-compact" role="img" aria-label="Mobile application screens for the wearable training system">
+            <span>Application</span><strong>Live training status · Movement feedback · Session summary</strong>
+          </div>
         </div>
       </div>
     </section>
@@ -98,3 +109,4 @@
   <script src="../script.js"></script>
 </body>
 </html>
+
