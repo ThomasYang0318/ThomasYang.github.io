@@ -8,12 +8,6 @@ function tagsMarkup(tags) {
   return `<div class="tags">${tags.map(tag => `<span>${tag}</span>`).join('')}</div>`;
 }
 
-function titleLengthClass(title) {
-  if (title.length > 34) return ' project-title-long';
-  if (title.length > 22) return ' project-title-medium';
-  return '';
-}
-
 function otherProjectMarkup(project, pathPrefix) {
   const media = `
     <div class="other-project-media">
@@ -22,7 +16,7 @@ function otherProjectMarkup(project, pathPrefix) {
   const body = `
     <div class="other-project-body">
       <span>${project.type}</span>
-      <h3 class="${titleLengthClass(project.title).trim()}">${project.title}</h3>
+      <h3>${project.title}</h3>
       <p>${project.description}</p>
       <b>${project.linkLabel}</b>
     </div>`;
@@ -48,7 +42,7 @@ function featuredProjectMarkup(track, pathPrefix) {
       <div class="flagship-copy">
         <div class="flagship-meta"><span>Featured project</span><span>${track.name}</span></div>
         <p class="project-type">${project.meta}</p>
-        <h3 class="${titleLengthClass(project.title).trim()}"><a href="${pathPrefix}${project.href}">${project.title}</a></h3>
+        <h3><a href="${pathPrefix}${project.href}">${project.title}</a></h3>
         <p>${project.description}</p>
         ${tagsMarkup(project.tags)}
         <a class="text-link" href="${pathPrefix}${project.href}">${project.linkLabel} <span>→</span></a>
