@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="OpenGL 3D Rendering System — Thomas Yang portfolio project." />
+  <title>OpenGL 3D Rendering System — Thomas Yang</title>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body class="project-page">
+  <header class="site-header"><div class="wrap nav-wrap"><a class="brand" href="../index.html">Thomas Yang</a><nav class="nav"><a href="../index.html#work">Projects</a><a href="../index.html#experience">Experience</a><a href="../index.html#about">About</a><a href="https://canva.link/bxi6xtonc9trjl6" target="_blank" rel="noreferrer">Resume ↗</a></nav><button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button></div></header>
+  <main>
+    <section class="project-hero wrap reveal">
+      <a class="back-link" href="../index.html#work">← Back to projects</a>
+      <p class="eyebrow">Visual Computing · C++</p>
+      <h1>OpenGL 3D Rendering System</h1>
+      <div class="project-summary"><div class="tags"><span>C++</span><span>OpenGL</span><span>OBJ</span><span>Shader</span><span>Lighting</span></div><p>A custom 3D rendering system implemented in C++ to understand the full pipeline behind common 3D software — from model parsing and mesh construction to shaders, materials, textures, and lighting.</p></div>
+      <div class="project-hero-image"><img src="../assets/images/opengl-render.svg" alt="OpenGL rendering competition result" /></div>
+    </section>
+
+    <section class="case-section wrap reveal"><div class="case-grid"><h2>Rendering pipeline</h2><div class="case-content"><p>The project begins by reading OBJ files and parsing vertices, faces, and material information. The renderer then builds meshes and uses shaders to calculate lighting and material effects before drawing the 3D model to the screen.</p><div class="link-row"><a class="button button-dark" href="https://youtu.be/56LOqgYDw74?si=bR4c4CGmDP8n8YdF" target="_blank" rel="noreferrer">Lighting demo ↗</a><a class="button button-light" href="https://youtu.be/pkUp02u5Pzg?si=0LxkyKDCgAUjesT6" target="_blank" rel="noreferrer">OBJ loader ↗</a></div></div></div></section>
+
+    <section class="case-section wrap reveal"><div class="case-grid"><h2>Lighting & texturing</h2><div class="case-content"><p>The renderer supports material processing, texturing, and multiple light types, making the differences between directional, spot, point, and combined lighting visible in the final output.</p><div class="case-image"><img src="../assets/images/opengl-lighting.svg" alt="Comparison of different lighting configurations in OpenGL" /></div></div></div></section>
+  </main>
+  <footer class="footer wrap"><span>© <span id="year"></span> Thomas Yang</span><a href="../index.html">Home ↑</a></footer>
+  <script src="../script.js"></script>
+</body>
+</html>
