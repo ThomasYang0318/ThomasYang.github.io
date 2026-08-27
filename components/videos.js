@@ -29,9 +29,10 @@ function chunkedVideoMarkup(video) {
       data-video-parts-count="${video.parts.count}"
       data-video-type="${video.type || 'video/mp4'}"
       data-video-title="${video.title}"
+      aria-busy="true"
     >
-      <button type="button">Load introduction video${video.sizeLabel ? ` · ${video.sizeLabel}` : ''}</button>
-      <p data-video-load-status aria-live="polite">The video loads only when requested.</p>
+      <span class="video-loading-indicator" aria-hidden="true"></span>
+      <p data-video-load-status aria-live="polite">Preparing introduction video${video.sizeLabel ? ` · ${video.sizeLabel}` : ''}…</p>
     </div>`;
 }
 
@@ -57,13 +58,12 @@ function partUrl(basePath, partNumber, pathPrefix) {
 
 function initChunkedVideos(root, pathPrefix) {
   root.querySelectorAll('[data-video-parts-base]').forEach(loader => {
-    const button = loader.querySelector('button');
     const status = loader.querySelector('[data-video-load-status]');
     const count = Number(loader.dataset.videoPartsCount);
     const batchSize = 6;
 
-    button?.addEventListener('click', async () => {
-      button.disabled = true;
+    const loadVideo = async () => {
+      loader.setAttribute('aria-busy', 'true');
       status.textContent = 'Loading video…';
 
       try {
@@ -84,17 +84,23 @@ function initChunkedVideos(root, pathPrefix) {
         const objectUrl = URL.createObjectURL(new Blob(buffers, { type: loader.dataset.videoType }));
         const video = document.createElement('video');
         video.controls = true;
-        video.preload = 'metadata';
+        video.preload = 'auto';
         video.playsInline = true;
+        video.autoplay = true;
+        video.muted = true;
         video.title = loader.dataset.videoTitle;
         video.src = objectUrl;
         loader.replaceWith(video);
+        video.play().catch(() => {});
         window.addEventListener('pagehide', () => URL.revokeObjectURL(objectUrl), { once: true });
       } catch (error) {
-        button.disabled = false;
-        status.textContent = 'The video could not be loaded. Please try again.';
+        loader.setAttribute('aria-busy', 'false');
+        loader.innerHTML = '<button type="button">Retry video</button><p data-video-load-status>The video could not be loaded.</p>';
+        loader.querySelector('button')?.addEventListener('click', loadVideo, { once: true });
       }
-    });
+    };
+
+    loadVideo();
   });
 }
 

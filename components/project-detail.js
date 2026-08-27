@@ -9,6 +9,13 @@ function linksMarkup(links = []) {
   `).join('')}</div>`;
 }
 
+function overviewFactsMarkup(facts = []) {
+  if (!facts.length) return '';
+  return `<div class="project-facts">${facts.map(fact => `
+    <div><span>${fact.label}</span><p>${fact.value}</p></div>
+  `).join('')}</div>`;
+}
+
 export function renderGenericProjectDetail(projects, { root = document } = {}) {
   const container = root.querySelector('[data-generic-project-detail]');
   if (!container) return;
@@ -44,10 +51,11 @@ export function renderGenericProjectDetail(projects, { root = document } = {}) {
     </section>` : '';
   const featureTourSection = project.featureTour ? `
     <section class="case-section wrap reveal">
-      <div class="case-grid">
-        <h2>Interactive experience</h2>
-        <div class="case-content" data-feature-tour="${projectId}"></div>
-      </div>
+      <div data-feature-tour="${projectId}"></div>
+    </section>` : '';
+  const caseStudySection = project.caseStudy ? `
+    <section class="case-section wrap reveal">
+      <div data-project-story="${projectId}"></div>
     </section>` : '';
 
   container.innerHTML = `
@@ -65,9 +73,10 @@ export function renderGenericProjectDetail(projects, { root = document } = {}) {
     <section class="case-section wrap reveal">
       <div class="case-grid">
         <h2>Project overview</h2>
-        <div class="case-content">${detailParagraphs}${linksMarkup(project.links)}</div>
+        <div class="case-content">${detailParagraphs}${overviewFactsMarkup(project.overviewFacts)}${linksMarkup(project.links)}</div>
       </div>
     </section>
+    ${caseStudySection}
     ${featureTourSection}
     ${videoSection}`;
 }

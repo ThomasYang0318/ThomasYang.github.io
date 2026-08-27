@@ -35,20 +35,20 @@ function featureTourMarkup(tour, pathPrefix) {
         <h3>${tour.title}</h3>
         <p>${tour.intro}</p>
       </div>
-      <div class="feature-tour-layout">
-        <div class="feature-tour-map">
-          <img src="${pathPrefix}${tour.image.src}" alt="${tour.image.alt}" loading="lazy" />
-          ${tour.items.map(hotspotMarkup).join('')}
-        </div>
-        <article class="feature-tour-panel" aria-live="polite">
-          <div class="feature-tour-preview">${featureImageMarkup(firstItem, pathPrefix)}</div>
+      <div class="feature-tour-map">
+        <img src="${pathPrefix}${tour.image.src}" alt="${tour.image.alt}" loading="lazy" />
+        ${tour.items.map(hotspotMarkup).join('')}
+      </div>
+      <div class="feature-tour-tabs" role="group" aria-label="Mijing feature selector">
+        ${tour.items.map(tabMarkup).join('')}
+      </div>
+      <div class="feature-tour-detail" aria-live="polite">
+        <div class="feature-tour-preview">${featureImageMarkup(firstItem, pathPrefix)}</div>
+        <article class="feature-tour-panel">
           <p class="feature-tour-index" data-feature-tour-index>Feature 01</p>
           <h3 data-feature-tour-title>${firstItem.label}</h3>
           <p data-feature-tour-description>${firstItem.description}</p>
         </article>
-      </div>
-      <div class="feature-tour-tabs" role="group" aria-label="Mijing feature selector">
-        ${tour.items.map(tabMarkup).join('')}
       </div>
     </div>`;
 }
