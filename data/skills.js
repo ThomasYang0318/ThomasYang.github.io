@@ -40,7 +40,8 @@ export const skillGroups = [
     skills: [
       { name: 'OpenGL', projectId: 'opengl' },
       { name: 'Image Processing', projectIds: ['mini-photoshop', 'sign-language-recognition'] },
-      { name: 'Blender', projectId: 'blender-match-move' }
+      { name: 'Blender', projectIds: ['blender-vfx-movie', 'blender-match-move'] }
     ]
   }
 ];
+
