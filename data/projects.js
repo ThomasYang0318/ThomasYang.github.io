@@ -11,7 +11,7 @@ export const projectTracks = [
     featured: {
       id: 'mijing',
       title: 'Mijing — Deep Travel Discovery',
-      href: 'projects/project.html?id=mijing&v=20260827-7',
+      href: 'projects/project.html?id=mijing&v=20260827-8',
       meta: 'UI/UX Design · Product Planning · Travel Discovery',
       description: 'A story-led map experience for recording moods and discovering the memories attached to places.',
       tags: ['UI/UX Design', 'Product Planning', 'Flutter', 'Maps'],
@@ -132,82 +132,6 @@ export const projectTracks = [
             images: [
               { src: 'assets/images/projects/software/mijing/story/swipe-card-flow.jpg', alt: 'Mijing swipe-card interaction with dislike and like states', eyebrow: 'Card interaction', title: 'Decide with a simple gesture', description: 'Swipe left to pass or right to save interest, reducing the effort required to keep exploring.', wide: true }
             ]
-          }
-        ]
-      },
-      featureTour: {
-        title: 'Try the product map',
-        intro: 'Now that the system is clear, select a hotspot on the map—or use the feature buttons—to inspect each function at a larger scale.',
-        image: {
-          src: 'assets/images/projects/software/mijing/story/personal-map-anatomy.jpg',
-          alt: 'Annotated Mijing personal map with post, profile, visited-place, personal, friend, and community controls'
-        },
-        items: [
-          {
-            id: 'personal-mode',
-            label: 'Personal Mode',
-            x: 45.9,
-            y: 85.4,
-            description: 'Focus the map on your own visited places—the personal layer for recording mood over time.',
-            image: {
-              src: 'assets/images/projects/software/mijing/story/personal-mode.jpg',
-              alt: 'Mijing personal map mode highlighted'
-            }
-          },
-          {
-            id: 'post',
-            label: 'Post',
-            x: 41.5,
-            y: 17.9,
-            description: 'Create a place-based post that records the mood, memory, and story connected to a visit.',
-            image: {
-              src: 'assets/images/projects/software/mijing/story/post-creation-flow.jpg',
-              alt: 'Mijing post creation flow'
-            }
-          },
-          {
-            id: 'profile',
-            label: 'Profile',
-            x: 58.5,
-            y: 17.9,
-            description: 'Review personal posts and visited places through a profile designed as a record of travel experiences.',
-            image: {
-              src: 'assets/images/projects/software/mijing/story/profile-flow.jpg',
-              alt: 'Mijing profile and personal record flow'
-            }
-          },
-          {
-            id: 'visited-place',
-            label: 'Visited Place',
-            x: 50.7,
-            y: 67.8,
-            description: 'Open a visited place to revisit its details and the stories connected to that location.',
-            image: {
-              src: 'assets/images/projects/software/mijing/story/place-detail-flow.jpg',
-              alt: 'Mijing visited-place details and story view'
-            }
-          },
-          {
-            id: 'friend-mode',
-            label: 'Friend Mode',
-            x: 50.1,
-            y: 85.4,
-            description: 'Reveal friends and their activity on the map to discover meaningful places through people you know.',
-            image: {
-              src: 'assets/images/projects/software/mijing/story/friend-mode.jpg',
-              alt: 'Mijing friend mode with friend avatars displayed on the map'
-            }
-          },
-          {
-            id: 'community-mode',
-            label: 'Community Mode',
-            x: 54.3,
-            y: 85.4,
-            description: 'Explore community stories and unexpected place recommendations beyond your immediate network.',
-            image: {
-              src: 'assets/images/projects/software/mijing/story/community-mode.jpg',
-              alt: 'Mijing community mode with a recommended place-based post'
-            }
           }
         ]
       }

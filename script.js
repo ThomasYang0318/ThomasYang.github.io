@@ -1,13 +1,13 @@
-import { projectLookup, projectTracks } from './data/projects.js?v=20260827-7';
-import { skillGroups } from './data/skills.js?v=20260827-7';
-import { initCarousels } from './components/carousel.js?v=20260827-7';
-import { renderFeatureTours } from './components/feature-tour.js?v=20260827-7';
-import { renderGenericProjectDetail } from './components/project-detail.js?v=20260827-7';
-import { renderProjectStories } from './components/project-story.js?v=20260827-7';
-import { renderProjectGalleries, renderProjectTracks } from './components/projects.js?v=20260827-7';
-import { initNavigation, initRevealAnimations, initThemeToggle, restoreHashTarget, updateCopyrightYear } from './components/site.js?v=20260827-7';
-import { initSkillProjectChooser, renderSkillGroups } from './components/skills.js?v=20260827-7';
-import { renderProjectVideos, renderVideoEmbeds } from './components/videos.js?v=20260827-7';
+import { projectLookup, projectTracks } from './data/projects.js?v=20260827-8';
+import { skillGroups } from './data/skills.js?v=20260827-8';
+import { initCarousels } from './components/carousel.js?v=20260827-8';
+import { renderFeatureTours } from './components/feature-tour.js?v=20260827-8';
+import { renderGenericProjectDetail } from './components/project-detail.js?v=20260827-8';
+import { renderProjectStories } from './components/project-story.js?v=20260827-8';
+import { renderProjectGalleries, renderProjectTracks } from './components/projects.js?v=20260827-8';
+import { initNavigation, initRevealAnimations, initThemeToggle, restoreHashTarget, updateCopyrightYear } from './components/site.js?v=20260827-8';
+import { initSkillProjectChooser, renderSkillGroups } from './components/skills.js?v=20260827-8';
+import { renderProjectVideos, renderVideoEmbeds } from './components/videos.js?v=20260827-8';
 
 const pathPrefix = document.body.classList.contains('project-page') ? '../' : '';
 
