@@ -12,24 +12,119 @@ export const projectTracks = [
       id: 'mijing',
       title: 'Mijing — Deep Travel Discovery',
       href: 'projects/project.html?id=mijing',
-      meta: 'Flutter · Mobile UX · Travel Discovery',
-      description: 'A map-based mobile experience that helps travelers discover destinations through visual exploration and swipeable recommendations.',
-      tags: ['Flutter', 'Maps', 'Travel Discovery', 'Product Design'],
+      meta: 'UI/UX Design · Product Planning · Travel Discovery',
+      description: 'A story-led map experience for recording moods and discovering the memories attached to places.',
+      tags: ['UI/UX Design', 'Product Planning', 'Flutter', 'Maps'],
       linkLabel: 'Read project',
-      placeholder: true,
+      mediaClass: 'presentation-media',
       details: [
-        'Mijing explores a mobile travel-discovery flow that helps users move from broad map exploration to specific destination ideas.',
-        'The experience combines location-based browsing with swipeable recommendation cards to keep discovery visual, lightweight, and easy to continue.'
+        'Mijing is shaped around two ideas: “Record Mood” and “Find a Story in the Place.” Instead of treating a destination as only a pin on a map, the experience connects places with the feelings, memories, and stories people leave behind.',
+        'My role covered UI/UX design and product planning. I structured the experience across personal, friend, and community map layers, then designed the flows for creating posts, revisiting places, browsing profiles, receiving recommendations, and swiping through destination stories.'
       ],
       links: [
         { label: 'View presentation ↗', url: 'https://canva.link/z82jjk7alag1ze0' }
       ],
+      videos: [
+        {
+          title: 'Mijing introduction',
+          type: 'video/mp4',
+          sizeLabel: '19 MB',
+          parts: {
+            basePath: 'assets/videos/mijing-introduction',
+            count: 26
+          }
+        }
+      ],
       images: [
         {
-          src: 'assets/images/project-placeholder-dog-en.jpg',
-          alt: 'No image available for the Mijing project yet'
+          src: 'assets/images/projects/software/mijing/overview.jpg',
+          alt: 'Mijing product overview showing its map-based and swipe-card discovery experiences'
+        },
+        {
+          src: 'assets/images/projects/software/mijing/map-modes.jpg',
+          alt: 'Mijing personal, friend, and community map modes'
+        },
+        {
+          src: 'assets/images/projects/software/mijing/swipe-cards.jpg',
+          alt: 'Mijing swipe-card interface for discovering place-based stories'
         }
-      ]
+      ],
+      featureTour: {
+        title: 'Explore the Mijing experience',
+        intro: 'Select a hotspot on the map—or use the feature buttons—to see how each part supports “Record Mood” and “Find a Story in the Place.”',
+        image: {
+          src: 'assets/images/projects/software/mijing/interactive-map.jpg',
+          alt: 'Annotated Mijing personal map with post, profile, visited-place, personal, friend, and community controls'
+        },
+        items: [
+          {
+            id: 'post',
+            label: 'Post',
+            x: 41.5,
+            y: 17.9,
+            description: 'Create a place-based post that records the mood, memory, and story connected to a visit.',
+            image: {
+              src: 'assets/images/projects/software/mijing/post-flow.jpg',
+              alt: 'Mijing post creation flow'
+            }
+          },
+          {
+            id: 'profile',
+            label: 'Profile',
+            x: 58.5,
+            y: 17.9,
+            description: 'Review personal posts and visited places through a profile designed as a record of travel experiences.',
+            image: {
+              src: 'assets/images/projects/software/mijing/profile-flow.jpg',
+              alt: 'Mijing profile and personal record flow'
+            }
+          },
+          {
+            id: 'visited-place',
+            label: 'Visited Place',
+            x: 50.7,
+            y: 67.8,
+            description: 'Open a visited place to revisit its details and the stories connected to that location.',
+            image: {
+              src: 'assets/images/projects/software/mijing/visited-place.jpg',
+              alt: 'Mijing visited-place details and story view'
+            }
+          },
+          {
+            id: 'personal-mode',
+            label: 'Personal Mode',
+            x: 45.9,
+            y: 85.4,
+            description: 'Focus the map on your own visited places—the personal layer for recording mood over time.',
+            image: {
+              src: 'assets/images/projects/software/mijing/record-mood.jpg',
+              alt: 'Mijing concept for recording mood and finding a story in a place'
+            }
+          },
+          {
+            id: 'friend-mode',
+            label: 'Friend Mode',
+            x: 50.1,
+            y: 85.4,
+            description: 'Reveal friends and their activity on the map to discover meaningful places through people you know.',
+            image: {
+              src: 'assets/images/projects/software/mijing/friend-mode.jpg',
+              alt: 'Mijing friend mode with friend avatars displayed on the map'
+            }
+          },
+          {
+            id: 'community-mode',
+            label: 'Community Mode',
+            x: 54.3,
+            y: 85.4,
+            description: 'Explore community stories and unexpected place recommendations beyond your immediate network.',
+            image: {
+              src: 'assets/images/projects/software/mijing/community-mode.jpg',
+              alt: 'Mijing community mode with a recommended place-based post'
+            }
+          }
+        ]
+      }
     },
     otherLabel: 'Other software projects',
     otherProjects: [

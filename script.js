@@ -1,6 +1,7 @@
 import { projectLookup, projectTracks } from './data/projects.js';
 import { skillGroups } from './data/skills.js';
 import { initCarousels } from './components/carousel.js';
+import { renderFeatureTours } from './components/feature-tour.js';
 import { renderGenericProjectDetail } from './components/project-detail.js';
 import { renderProjectGalleries, renderProjectTracks } from './components/projects.js';
 import { initNavigation, initRevealAnimations, initThemeToggle, restoreHashTarget, updateCopyrightYear } from './components/site.js';
@@ -13,7 +14,8 @@ initThemeToggle();
 renderProjectTracks(projectTracks, { pathPrefix });
 renderGenericProjectDetail(projectLookup);
 renderProjectGalleries(projectLookup, { pathPrefix });
-renderProjectVideos(projectLookup);
+renderFeatureTours(projectLookup, { pathPrefix });
+renderProjectVideos(projectLookup, { pathPrefix });
 renderVideoEmbeds();
 renderSkillGroups(skillGroups);
 initSkillProjectChooser(projectLookup);

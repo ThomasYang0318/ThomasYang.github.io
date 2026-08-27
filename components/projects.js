@@ -31,7 +31,8 @@ function featuredProjectMarkup(track, pathPrefix) {
   const mediaClasses = [
     'flagship-media',
     'project-carousel',
-    project.placeholder ? 'placeholder-media' : ''
+    project.placeholder ? 'placeholder-media' : '',
+    project.mediaClass || ''
   ].filter(Boolean).join(' ');
 
   return `

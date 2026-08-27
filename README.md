@@ -10,7 +10,8 @@ Most portfolio updates only require editing [`data/projects.js`](data/projects.j
 - `featured` controls the large project shown for each discipline.
 - `otherProjects` controls the smaller project cards.
 - `images` is the carousel image list. Add another `{ src, alt }` object to add a slide.
-- `videos` is the embedded YouTube list. Add a `{ title, youtubeId }` object to add a video.
+- `videos` accepts privacy-enhanced YouTube embeds or local MP4 files.
+- `featureTour` creates an interactive annotated-image walkthrough on a project page.
 - `details` contains the paragraphs shown on a project's internal article page.
 - `links` contains external presentations, demos, or source links shown inside the article.
 
@@ -27,12 +28,22 @@ videos: [
   {
     title: 'Project demo',
     youtubeId: 'VIDEO_ID_ONLY'
+  },
+  {
+    title: 'Project introduction',
+    src: 'assets/videos/project-introduction.mp4',
+    type: 'video/mp4'
   }
 ]
 ```
 
 Use only the YouTube video ID, not the entire URL. For example, the ID in
 `https://youtu.be/DJ7WR7n6QPM` is `DJ7WR7n6QPM`.
+For a local video, place the file in `assets/videos/` and use its root-relative
+project path as `src`; nested project pages are adjusted automatically.
+Large videos can instead use on-demand `parts` with a `basePath` and `count`;
+the player downloads and reconstructs those segments only after the visitor
+selects the load button.
 
 ## Link skills to projects
 
@@ -63,14 +74,16 @@ detail page, so card clicks stay within the portfolio first.
 - `data/skills.js` — skill tags and their one-to-one or one-to-many project links
 - `components/projects.js` — project-card and gallery rendering
 - `components/project-detail.js` — shared article-style detail-page rendering
+- `components/feature-tour.js` — reusable hotspot-driven project walkthroughs
 - `components/carousel.js` — reusable carousel markup and controls
-- `components/videos.js` — privacy-enhanced YouTube embeds
+- `components/videos.js` — reusable local MP4 and privacy-enhanced YouTube embeds
 - `components/skills.js` — skill links and the multi-project selection dialog
 - `components/site.js` — navigation, reveal animation, and copyright year
 - `script.js` — small module entry point
 - `projects/` — featured project detail pages
 - `styles.css` — responsive visual system
 - `assets/images/projects/` — project images grouped by discipline
+- `assets/videos/` — locally hosted project videos
 
 ## Preview locally
 
