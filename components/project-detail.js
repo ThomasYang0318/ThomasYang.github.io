@@ -42,6 +42,13 @@ export function renderGenericProjectDetail(projects, { root = document } = {}) {
         <div class="case-content" data-project-videos="${projectId}"></div>
       </div>
     </section>` : '';
+  const featureTourSection = project.featureTour ? `
+    <section class="case-section wrap reveal">
+      <div class="case-grid">
+        <h2>Interactive experience</h2>
+        <div class="case-content" data-feature-tour="${projectId}"></div>
+      </div>
+    </section>` : '';
 
   container.innerHTML = `
     <section class="project-hero wrap reveal">
@@ -61,5 +68,6 @@ export function renderGenericProjectDetail(projects, { root = document } = {}) {
         <div class="case-content">${detailParagraphs}${linksMarkup(project.links)}</div>
       </div>
     </section>
+    ${featureTourSection}
     ${videoSection}`;
 }
