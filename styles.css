@@ -135,7 +135,7 @@ img { display: block; width: 100%; }
 .button:hover { transform: translateY(-2px); }
 .button-dark { background: var(--text); color: var(--bg); }
 .button-light { border: 1px solid var(--line); background: transparent; }
-.hero-aside { align-self: end; padding-bottom: 4px; }
+.hero-aside { align-self:start; margin-top:38px; }
 .portrait { width: 210px; max-width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 22px; filter: saturate(.82); }
 .hero-meta { display: grid; gap: 8px; margin-top: 20px; font-size: 13px; color: var(--muted); }
 
@@ -475,7 +475,7 @@ a.portfolio-card:hover { transform:translateY(-3px); border-color:var(--line-str
   .nav-toggle { display:block; }
   .theme-toggle { margin-left:auto; }
   .hero { grid-template-columns:1fr; min-height:auto; gap:56px; padding-top:82px; }
-  .hero-aside { display:flex; align-items:end; gap:22px; }
+  .hero-aside { display:flex; margin-top:0; align-items:end; gap:22px; }
   .portrait { width:138px; }
   .about-grid, .section-heading, .project-info, .split-section, .project-summary, .case-grid, .discipline-group { grid-template-columns:1fr; gap:32px; }
   .discipline-heading { position:static; }
