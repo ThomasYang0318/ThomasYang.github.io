@@ -323,6 +323,39 @@ export const projectTracks = [
         }
       },
       {
+        id: 'blender-vfx-movie',
+        title: 'Blender VFX / Movie',
+        type: 'VFX short film',
+        description: 'A dark 404-themed short film combining live-action imagery with Blender visual effects.',
+        href: 'projects/project.html?id=blender-vfx-movie&v=20260827-11',
+        linkLabel: 'Read project →',
+        tags: ['Blender', 'VFX', 'Movie', 'Compositing'],
+        details: [
+          'Blender VFX / Movie is a short visual piece built around the idea of “404 — Where there’s will, there’s a way.” Its candle poster establishes the project’s dark tone and recurring light motif.',
+          'The film combines live-action hallway footage with an unsettling digital figure, using composition, lighting, and visual effects to turn an ordinary location into a surreal cinematic scene.'
+        ],
+        links: [
+          { label: 'Watch on YouTube ↗', url: 'https://youtu.be/LgfpdQ-KZZE' }
+        ],
+        videos: [
+          { title: 'Blender VFX / Movie — 404', youtubeId: 'LgfpdQ-KZZE' }
+        ],
+        image: {
+          src: 'assets/images/projects/visual/blender-vfx-movie/hallway-vfx.png',
+          alt: 'A dark hallway scene with a headless figure created for the Blender VFX movie'
+        },
+        images: [
+          {
+            src: 'assets/images/projects/visual/blender-vfx-movie/hallway-vfx.png',
+            alt: 'Final Blender VFX movie frame showing a headless figure in a dark hallway'
+          },
+          {
+            src: 'assets/images/projects/visual/blender-vfx-movie/404-poster.png',
+            alt: '404 movie poster featuring a candle and the line Where there is will there is a way'
+          }
+        ]
+      },
+      {
         id: 'blender-match-move',
         title: 'Blender VFX / Match Move',
         type: 'Multimedia',
