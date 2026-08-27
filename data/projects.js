@@ -11,7 +11,7 @@ export const projectTracks = [
     featured: {
       id: 'mijing',
       title: 'Mijing — Deep Travel Discovery',
-      href: 'projects/project.html?id=mijing&v=20260827-6',
+      href: 'projects/project.html?id=mijing&v=20260827-7',
       meta: 'UI/UX Design · Product Planning · Travel Discovery',
       description: 'A story-led map experience for recording moods and discovering the memories attached to places.',
       tags: ['UI/UX Design', 'Product Planning', 'Flutter', 'Maps'],
@@ -65,7 +65,20 @@ export const projectTracks = [
             images: [
               { src: 'assets/images/projects/software/mijing/story/concept-record-mood.jpg', alt: 'Mijing core concept beside the map interface', eyebrow: 'Core promise', title: 'Record Mood. Find a Story in the Place.', description: 'The concept connects a physical location with the feeling and personal story attached to it.', wide: true },
               { src: 'assets/images/projects/software/mijing/story/discovery-paths.jpg', alt: 'Mijing map-based and swipe-card discovery paths', eyebrow: 'Discovery model', title: 'Two ways to start exploring', description: 'Use the map when location matters, or swipe through story cards when inspiration comes first.' },
-              { src: 'assets/images/projects/software/mijing/story/audience-model.jpg', alt: 'Mijing personal friend and community audience model', eyebrow: 'Social model', title: 'Three levels of social distance', description: 'Personal, friend, and community views control whose memories and recommendations appear.' }
+              {
+                src: 'assets/images/projects/software/mijing/story/audience-model.jpg',
+                alt: 'Mijing personal friend and community audience model',
+                eyebrow: 'Interactive social model',
+                title: 'Choose a layer to see how it works',
+                description: 'Personal, friend, and community views control whose memories and recommendations appear.',
+                interactionHint: 'Select one of the three rows in the image to jump to its feature walkthrough.',
+                wide: true,
+                hotspots: [
+                  { label: 'Person', target: 'mijing-story-personal', x: 38.5, y: 28.5, width: 45, height: 14.5, description: 'Open the personal layer walkthrough' },
+                  { label: 'Friend', target: 'mijing-story-friend', x: 38.5, y: 47.5, width: 45, height: 14.5, description: 'Open the friend layer walkthrough' },
+                  { label: 'Community', target: 'mijing-story-community', x: 38.5, y: 66.5, width: 45, height: 14.5, description: 'Open the community layer walkthrough' }
+                ]
+              }
             ]
           },
           {
@@ -424,3 +437,4 @@ export const projectLookup = Object.fromEntries(
     }])
   ])
 );
+
