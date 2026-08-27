@@ -334,8 +334,8 @@ a.portfolio-card:hover { transform:translateY(-3px); border-color:var(--line-str
 .project-info h3, .project-card h3 { margin:0; font-size: clamp(27px,3vw,40px); line-height:1.12; letter-spacing:-.035em; font-weight:620; }
 .project-info p:not(.project-type), .project-card p:not(.project-type) { max-width:760px; color:var(--copy); line-height:1.65; font-size:16px; }
 .project-type { margin:0 0 12px; }
-.tags { display:flex; flex-wrap:wrap; gap:8px; margin-top:20px; }
-.tags span, .tags a { padding:7px 11px; border:1px solid var(--line); border-radius:999px; font-size:12px; color:var(--copy); }
+.tags { display:flex; align-content:flex-start; align-items:flex-start; flex-wrap:wrap; gap:8px; margin-top:20px; }
+.tags span, .tags a { display:inline-flex; width:max-content; height:fit-content; padding:7px 11px; align-items:center; border:1px solid var(--line); border-radius:999px; font-size:12px; line-height:1.2; color:var(--copy); }
 .tags a { transition:border-color .2s ease, color .2s ease, background .2s ease; }
 .tags a:hover, .tags a:focus-visible { border-color:var(--accent); color:var(--accent); background:var(--accent-wash); }
 .text-link { display:inline-flex; gap:9px; margin-top:26px; font-size:14px; font-weight:700; }
