@@ -12,6 +12,7 @@ Most portfolio updates only require editing [`data/projects.js`](data/projects.j
 - `images` is the carousel image list. Add another `{ src, alt }` object to add a slide.
 - `videos` accepts privacy-enhanced YouTube embeds or local MP4 files.
 - `featureTour` creates an interactive annotated-image walkthrough on a project page.
+- `caseStudy` creates a chapter-based product narrative with captioned project images.
 - `details` contains the paragraphs shown on a project's internal article page.
 - `links` contains external presentations, demos, or source links shown inside the article.
 
@@ -75,6 +76,7 @@ detail page, so card clicks stay within the portfolio first.
 - `components/projects.js` — project-card and gallery rendering
 - `components/project-detail.js` — shared article-style detail-page rendering
 - `components/feature-tour.js` — reusable hotspot-driven project walkthroughs
+- `components/project-story.js` — chapter navigation and systematic project storytelling
 - `components/carousel.js` — reusable carousel markup and controls
 - `components/videos.js` — reusable local MP4 and privacy-enhanced YouTube embeds
 - `components/skills.js` — skill links and the multi-project selection dialog
