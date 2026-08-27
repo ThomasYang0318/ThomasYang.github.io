@@ -11,7 +11,7 @@ export const projectTracks = [
     featured: {
       id: 'mijing',
       title: 'Mijing — Deep Travel Discovery',
-      href: 'projects/project.html?id=mijing&v=20260827-5',
+      href: 'projects/project.html?id=mijing&v=20260827-6',
       meta: 'UI/UX Design · Product Planning · Travel Discovery',
       description: 'A story-led map experience for recording moods and discovering the memories attached to places.',
       tags: ['UI/UX Design', 'Product Planning', 'Flutter', 'Maps'],

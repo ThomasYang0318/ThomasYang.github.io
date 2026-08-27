@@ -54,7 +54,7 @@ export function renderGenericProjectDetail(projects, { root = document } = {}) {
       <div data-feature-tour="${projectId}"></div>
     </section>` : '';
   const caseStudySection = project.caseStudy ? `
-    <section class="case-section wrap reveal">
+    <section class="case-section wrap">
       <div data-project-story="${projectId}"></div>
     </section>` : '';
 
