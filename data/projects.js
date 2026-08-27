@@ -11,7 +11,7 @@ export const projectTracks = [
     featured: {
       id: 'mijing',
       title: 'Mijing — Deep Travel Discovery',
-      href: 'projects/project.html?id=mijing&v=20260827-3',
+      href: 'projects/project.html?id=mijing&v=20260827-4',
       meta: 'UI/UX Design · Product Planning · Travel Discovery',
       description: 'A story-led map experience for recording moods and discovering the memories attached to places.',
       tags: ['UI/UX Design', 'Product Planning', 'Flutter', 'Maps'],
@@ -33,12 +33,10 @@ export const projectTracks = [
       videos: [
         {
           title: 'Mijing introduction',
-          type: 'video/mp4',
-          sizeLabel: '19 MB',
-          parts: {
-            basePath: 'assets/videos/mijing-introduction',
-            count: 26
-          }
+          youtubeId: 'zAio6N_cqA4',
+          autoplay: true,
+          muted: true,
+          portrait: true
         }
       ],
       images: [

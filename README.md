@@ -10,7 +10,7 @@ Most portfolio updates only require editing [`data/projects.js`](data/projects.j
 - `featured` controls the large project shown for each discipline.
 - `otherProjects` controls the smaller project cards.
 - `images` is the carousel image list. Add another `{ src, alt }` object to add a slide.
-- `videos` accepts privacy-enhanced YouTube embeds or local MP4 files.
+- `videos` accepts privacy-enhanced YouTube embeds or local MP4 files, including portrait video and muted autoplay options.
 - `featureTour` creates an interactive annotated-image walkthrough on a project page.
 - `caseStudy` creates a chapter-based product narrative with captioned project images.
 - `details` contains the paragraphs shown on a project's internal article page.
@@ -28,7 +28,10 @@ images: [
 videos: [
   {
     title: 'Project demo',
-    youtubeId: 'VIDEO_ID_ONLY'
+    youtubeId: 'VIDEO_ID_ONLY',
+    autoplay: true,
+    muted: true,
+    portrait: true
   },
   {
     title: 'Project introduction',
@@ -42,9 +45,6 @@ Use only the YouTube video ID, not the entire URL. For example, the ID in
 `https://youtu.be/DJ7WR7n6QPM` is `DJ7WR7n6QPM`.
 For a local video, place the file in `assets/videos/` and use its root-relative
 project path as `src`; nested project pages are adjusted automatically.
-Large videos can instead use on-demand `parts` with a `basePath` and `count`;
-the player downloads and reconstructs those segments only after the visitor
-selects the load button.
 
 ## Link skills to projects
 
